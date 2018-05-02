@@ -4,7 +4,7 @@
 /target
 /.classpath
 /.project
-/.gradle/
-/build
-/out
-/test
+.gradle/
+/build/
+out
+test
