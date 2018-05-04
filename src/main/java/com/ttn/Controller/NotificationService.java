@@ -22,7 +22,7 @@ public class NotificationService {
         this.javaMailSender = javaMailSender;
     }
 //   Send Email In 10 Seconds automatically
-//    @Scheduled(cron = "*/10 * * * * *" )
+    @Scheduled(cron = "*/10 * * * * *" )
     public void sendNotificaitoin() throws MailException, InterruptedException {
 
         System.out.println("Sleeping now...");

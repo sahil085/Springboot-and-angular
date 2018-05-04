@@ -53,17 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/", "/index.html","/token","/home","/dummy","/angular","/isloggedin")
                 .permitAll()
-                .antMatchers("*.js","*.css").permitAll()
-                .anyRequest()
-                .authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/home")
-                .loginProcessingUrl("/login")
-                .passwordParameter("password")
-                .usernameParameter("username")
-                .failureUrl("/failure")
-                .defaultSuccessUrl("/success");
+                .antMatchers("/", "/**.html", "/app/**.js","/*.css","*.js").permitAll();
     }
 
     @Autowired
